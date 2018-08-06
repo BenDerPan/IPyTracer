@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "IPyTracer", "IPyTracer.pyproj", "{19208233-0338-49D3-B716-6089F39F3109}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{1FB7B34E-0E08-4882-803B-CB8C8C271BFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simple_example", "examples\simple_example\simple_example.csproj", "{43D2A47A-E5E9-4B18-A1A1-15FAF811BA7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19208233-0338-49D3-B716-6089F39F3109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19208233-0338-49D3-B716-6089F39F3109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D2A47A-E5E9-4B18-A1A1-15FAF811BA7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D2A47A-E5E9-4B18-A1A1-15FAF811BA7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D2A47A-E5E9-4B18-A1A1-15FAF811BA7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D2A47A-E5E9-4B18-A1A1-15FAF811BA7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{43D2A47A-E5E9-4B18-A1A1-15FAF811BA7B} = {1FB7B34E-0E08-4882-803B-CB8C8C271BFC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD7DB075-2C6B-436C-AE5D-895609BB96D9}
+	EndGlobalSection
+EndGlobal
