@@ -23,28 +23,35 @@ namespace simple_example
 
             //直接执行py文件，并直接使用其中的类
             dynamic manPy = engine.ExecuteFile(@"man.py");
-            //获取定义的类方法
-            dynamic ping = manPy.Ping;
-            var a = ping("1.2.3.1");
-
-            Console.WriteLine(a);
-
+            dynamic ipyTracer = manPy.ipyTracer;
             //构建类实例
             dynamic man = manPy.Man("BenDerPan", 27);
             //执行类方法
             var v = man.Add(777, 888);
             Console.WriteLine("777+888={0}", v);
-            //执行类方法
-            man.Say("Hello，World！");
-            var o = man.obj;
-            var members = o.get_members();
-            var objValue = o.get_value();
-            var t = objValue.GetType();
-            var p = t.GetProperties();
-            foreach (var mm in members)
+            for (int i = 0; i < ipyTracer.WatchVariables.Count; i++)
             {
-                Console.WriteLine("Name:{0}   Type:{1}    Value:{2}", mm.name, mm.type, mm.get_value());
+                dynamic obj = ipyTracer.WatchVariables[i];
+                dynamic name = obj.Name;
+                dynamic dateTime = obj.WatchTime;
+                dynamic members = obj.Value.get_members();
+                dynamic objValue = obj.Value.get_value();
+                foreach (var mm in members)
+                {
+                    Console.WriteLine("Name:{0}   Type:{1}    Value:{2}", mm.name, mm.type, mm.get_value());
+                }
             }
+            //执行类方法
+            //man.Say("Hello，World！");
+            //var o = man.obj;
+            //var members = o.get_members();
+            //var objValue = o.get_value();
+            //var t = objValue.GetType();
+            //var p = t.GetProperties();
+            //foreach (var mm in members)
+            //{
+            //    Console.WriteLine("Name:{0}   Type:{1}    Value:{2}", mm.name, mm.type, mm.get_value());
+            //}
             Console.ReadLine();
 
             //======另外方式实现调用=============

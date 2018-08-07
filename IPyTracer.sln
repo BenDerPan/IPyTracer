@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{1F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simple_example", "examples\simple_example\simple_example.csproj", "{43D2A47A-E5E9-4B18-A1A1-15FAF811BA7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winform_example", "examples\winform_example\winform_example.csproj", "{7BD45A9B-5134-443E-9216-3D71D817E611}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,12 +23,17 @@ Global
 		{43D2A47A-E5E9-4B18-A1A1-15FAF811BA7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43D2A47A-E5E9-4B18-A1A1-15FAF811BA7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43D2A47A-E5E9-4B18-A1A1-15FAF811BA7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BD45A9B-5134-443E-9216-3D71D817E611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BD45A9B-5134-443E-9216-3D71D817E611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BD45A9B-5134-443E-9216-3D71D817E611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BD45A9B-5134-443E-9216-3D71D817E611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{43D2A47A-E5E9-4B18-A1A1-15FAF811BA7B} = {1FB7B34E-0E08-4882-803B-CB8C8C271BFC}
+		{7BD45A9B-5134-443E-9216-3D71D817E611} = {1FB7B34E-0E08-4882-803B-CB8C8C271BFC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD7DB075-2C6B-436C-AE5D-895609BB96D9}

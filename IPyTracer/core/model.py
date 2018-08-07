@@ -66,3 +66,7 @@ class ModelObject(object):
         if not val:
             val = 'n/a'
         return val
+
+    def get_value_ref(self):
+        return self.ref
+

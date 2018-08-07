@@ -1,18 +1,24 @@
-﻿import os
+﻿# coding:utf-8
+import os
 import sys
 
 #引入IPyTracer库路径
 sys.path.append("..\..\..\..")
 
-from IPyTracer.core.model import ModelObject
+from IPyTracer import Tracer
+ipyTracer=Tracer()
 class Man:
+   
     def __init__(self, name,age):
         self.name=name
         self.age=age
-        self.obj=None
+        self.childs=[]
 
     def Add(self,a,b):
-        self.obj=ModelObject(self)
+        global ipyTracer
+        ipyTracer.Watch("Man.Add",self)
+        child=Man("小明",5)
+        self.childs.append(child)
         return a+b
 
     def Say(self,message):
@@ -21,13 +27,19 @@ class Man:
     def Run(self):
         print("我正在运行")
 
+def Run():
+    global ipyTracer
+    a=100
+    b=200
+    c=0
+    ipyTracer.Watch("a",a)
+    ipyTracer.Watch("b",b)
+    ipyTracer.Watch("c",c)
 
-def Ping(target):
-    print("正在执行ping：",target)
-    m=Man("大娜迦",100)
-    v=m.Add(123,456)
-    print(v)
-    return "结果：{0} {1}".format(target,v)
+    c=a*b+a
+    ipyTracer.Watch("c2",c)
 
-if __name__ =="__main__":
-    Ping("1.2.3.4")
+    m=Man("Jack",19)
+    m.Add(a,b)
+    m.Say("Hello")
+    m.Run()
